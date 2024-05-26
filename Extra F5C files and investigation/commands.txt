@@ -1,0 +1,7 @@
+samtools sort reverse_4.bam > reverse_4_sorted.bam
+
+samtools index reverse_4_sorted.bam
+
+f5c index -d fast5/ reverse_4.fa
+
+f5c eventalign -b reverse_4_sorted.bam -g reverse_4_reference.fa -r reverse_4.fa --pore r10 > events_reverse_4.tsv

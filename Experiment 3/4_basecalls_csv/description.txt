@@ -1,0 +1,3 @@
+These tests have taken the 51k reads from Adrian and basecalled them using dorado. The hard decoded bases are then compared to the 16 reference sequences using the edit distance, and the best match is chosen. This match is compared the ground truth assumed from Adrian's data, to determine accuracy. Certain reference strands seem more prone to error which is interesting.
+In order to improve the error rate, a proposal that the end bases should be trimmed has been tested. 2 and 5 bases are cutoff and the same results generated.
+The decoding capabilities seem to worsen as 

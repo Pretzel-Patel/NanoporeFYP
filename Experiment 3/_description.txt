@@ -1,0 +1,5 @@
+
+Command to find subset of fast5 files
+fast5_subset --input ./1_input_fast5 --save_path ./5_reverse_1 --read_id_list .\reverse1_read_ids.txt --batch_size 1000 --recursive
+
+dorado basecaller -v --batchsize 64 ../models_dorado/dna_r9.4.1_e8_sup@v3.3 ./2_converted_pod5/multi_test.pod5 > ./2_converted_pod5/calls_test.bam --reference ./2_converted_pod5/test.fa
