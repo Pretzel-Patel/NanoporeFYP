@@ -4,7 +4,7 @@ import math
 import time
 from itertools import product
 import csv
-import pyttsx3
+# import pyttsx3
 import os
 import sys
 os.chdir(sys.path[0])
@@ -60,9 +60,12 @@ else:
     i = 0
     # rx_msg_all = [line.replace('\x00','') for line in rx_msg_all]
     valid_keys = []
+    # print(rx_msg_all)
+    # raise Exception
     while i < len(rx_msg_all)-1:
         # print(i)
-        read_id = (rx_msg_all[i].split('@'))[1][:-1]
+        # print(rx_msg_all[i][1:37])
+        read_id = rx_msg_all[i][1:37] # (rx_msg_all[i].split('@'))[1][:-1]
         reads_dict[read_id][1] = rx_msg_all[i+1][:-1]
         i += 4
 
@@ -114,6 +117,6 @@ with open(output_file, "w") as f:
         f.write(line)
         f.write('\n')
 
-engine = pyttsx3.init()
-engine.say('Trial is complete. Trial is complete. Trial is complete.')
-engine.runAndWait()
+# engine = pyttsx3.init()
+# engine.say('Trial is complete. Trial is complete. Trial is complete.')
+# engine.runAndWait()

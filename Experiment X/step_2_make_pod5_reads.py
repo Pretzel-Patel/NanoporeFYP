@@ -12,6 +12,8 @@ os.chdir(sys.path[0])
 
 from step_0_configure import num_trials, sd_min, sd_max, dwell_min, dwell_max, choice_list, offset, scale, model, dorado_call_auto, sample_rate, squiggle_generation
 
+dorado_path = r'C:\Users\preet\Downloads\dorado-0.7.3-win64\dorado-0.7.3-win64\bin\dorado'
+
 # Get saved data
 def load_list_of_lists_from_csv(filename):
     with open(filename, 'r') as csvfile:
@@ -32,7 +34,7 @@ else:
 
 # Check if file exists
 pod5_filename = "4_reads/all_reads.pod5"
-command = f'dorado basecaller -v --emit-fastq --batchsize 64 ../models_dorado/{model} 4_reads/all_reads.pod5 > 5_rx_msg/all_calls.fa'
+command = f'{dorado_path} basecaller -v --emit-fastq --batchsize 64 ../models_dorado/{model} 4_reads/all_reads.pod5 > 5_rx_msg/all_calls.fa'
 if os.path.exists(pod5_filename):
     delete = int(input('all_reads.pod5 exists. Would you like to delete? Enter (0) or (1): '))
     if delete:

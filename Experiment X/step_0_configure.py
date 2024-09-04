@@ -1,15 +1,15 @@
 # Trial constants
-len_msg = 200                       # number of codewords
-PAD_str = 'ACGTACGTAC'
-num_trials = 4000                   # number of reads to generate for each combination of parameters
+len_msg = 1                       # number of codewords
+PAD_str = ''
+num_trials = 400                   # number of reads to generate for each combination of parameters
 
 # Trial parameters
 sd_min = 10                        # 10 means 0.10 normalised noise
 sd_max = 10
-dwell_min = 10                      # dwell time in number of bases
-dwell_max = 10
-choice_list = [1,2,3,4]             # index of codebooks to test, corresponding to numbering in ./1_codebooks/
-num_codebooks = 4
+dwell_min = 1                      # dwell time in number of bases
+dwell_max = 20
+choice_list = [1]             # index of codebooks to test, corresponding to numbering in ./1_codebooks/
+num_codebooks = 1
 
 # Squiggle generation method
 squiggle_generation = 'kmer'        # 'kmer' | 'scrappie'

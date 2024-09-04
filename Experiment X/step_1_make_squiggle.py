@@ -64,6 +64,9 @@ for choice, sd_mean_scaled, dwell_mean in product(choice_list, range(sd_min,sd_m
     all_signals = []
     transmit_text = ""
 
+
+
+
     # Conduct repeated trials
     for i in range(num_trials):
         # Generate transmission message
