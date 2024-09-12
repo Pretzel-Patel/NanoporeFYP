@@ -87,6 +87,7 @@ len_msg_bases = len(reads_dict[key][0])
 print(f'Edit distance calculations took {time.time()-start:.2}s\n')
 
 summary_all = []
+details_all = []
 
 for params, edit_distances in results_dict.items():
     sd_mean = int(params[0:8]) / 100
@@ -108,12 +109,20 @@ for params, edit_distances in results_dict.items():
     excel_summary = f"{choice},{len_msg_bases//3},{num_valid_trials},{sd_mean},{dwell_mean},0,{mean_result:.2f},{sd_result:.2f}"
     # print(f"Excel summary: {excel_summary}")
     summary_all.append(excel_summary)
+    details_all.append((', ').join([str(num) for num in edit_distances]))
 
 
 # Output summary of trials
 output_file = "summary.txt"
 with open(output_file, "w") as f:
     for line in summary_all:
+        f.write(line)
+        f.write('\n')
+
+# Output details of trials
+output_file = "details.txt"
+with open(output_file, "w") as f:
+    for line in details_all:
         f.write(line)
         f.write('\n')
 
