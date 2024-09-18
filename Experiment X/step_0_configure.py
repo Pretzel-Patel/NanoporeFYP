@@ -8,8 +8,8 @@ sd_min = 0                        # 10 means 0.10 normalised noise
 sd_max = 20
 dwell_min = 10                      # dwell time in number of bases
 dwell_max = 10
-choice_list = [1]             # index of codebooks to test, corresponding to numbering in ./1_codebooks/
-num_codebooks = 1
+choice_list = [4,5,6]             # index of codebooks to test, corresponding to numbering in ./1_codebooks/
+num_codebooks = 6
 
 # Squiggle generation method
 squiggle_generation = 'kmer'        # 'kmer' | 'scrappie'

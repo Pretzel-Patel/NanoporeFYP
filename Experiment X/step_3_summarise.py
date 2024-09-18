@@ -106,7 +106,7 @@ for params, edit_distances in results_dict.items():
     print(f"Parameters: codebook={choice}, sd={sd_mean}, K={dwell_mean}, num-trials={num_trials}, num-valid-trials={num_valid_trials}")
     print(f"Mean edit distance is {mean_result:.2f}, sd is {sd_result:.2f}, Q-score is {Q_result:.2f}")
     print(f"95% confidence interval for mean is [{edit_lower:.2f}, {edit_upper:.2f}] and for Q-score is [{Q_lower:.2f}, {Q_upper:.2f}]\n")
-    excel_summary = f"{choice},{len_msg_bases//3},{num_valid_trials},{sd_mean},{dwell_mean},0,{mean_result:.2f},{sd_result:.2f}"
+    excel_summary = f"{choice},{len_msg_bases},{num_valid_trials},{sd_mean},{dwell_mean},0,{mean_result:.2f},{sd_result:.2f}"
     # print(f"Excel summary: {excel_summary}")
     summary_all.append(excel_summary)
     details_all.append((', ').join([str(num) for num in edit_distances]))
